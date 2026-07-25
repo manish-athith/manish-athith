@@ -17,8 +17,18 @@
 
 <br>
 
-<code>manish@github ~ $ links --list</code>
+<h3><code>manish@github ~ $ ./links.sh</code></h3>
 
-[Portfolio](https://manishchoudharyportfolio.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/manish-choudhary110904) · [manish.athith@gmail.com](mailto:manish.athith@gmail.com)
+<b>AI Product Research Fellow · ML Engineer · Builder</b>
+
+<br><br>
+
+<a href="https://manishchoudharyportfolio.vercel.app/"><img src="./badge-portfolio.svg" height="34" /></a>
+<br><br>
+<a href="https://www.linkedin.com/in/manish-choudhary110904"><img src="./badge-linkedin.svg" height="34" /></a>
+<br><br>
+<a href="https://github.com/manish-athith"><img src="./badge-github.svg" height="34" /></a>
+<br><br>
+<a href="mailto:manish.athith@gmail.com"><img src="./badge-mail.svg" height="34" /></a>
 
 </div>

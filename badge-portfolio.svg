@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="523" height="34" viewBox="0 0 523 34">
+<clipPath id="clip"><rect width="523" height="34" rx="17.0"/></clipPath>
+<g clip-path="url(#clip)">
+<rect x="0" y="0" width="128" height="34" fill="#21262d"/>
+<rect x="128" y="0" width="395" height="34" fill="#e6edf3"/>
+</g>
+<text x="64" y="21.4" font-family="SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace" font-size="12.5" font-weight="700" fill="#c9d1d9" text-anchor="middle">PORTFOLIO</text>
+<text x="326" y="21.4" font-family="SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace" font-size="12.5" font-weight="700" fill="#0d1117" text-anchor="middle">MANISHCHOUDHARYPORTFOLIO.VERCEL.APP</text>
+</svg>

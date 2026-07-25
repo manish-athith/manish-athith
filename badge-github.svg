@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="267" height="34" viewBox="0 0 267 34">
+<clipPath id="clip"><rect width="267" height="34" rx="17.0"/></clipPath>
+<g clip-path="url(#clip)">
+<rect x="0" y="0" width="98" height="34" fill="#21262d"/>
+<rect x="98" y="0" width="169" height="34" fill="#8250df"/>
+</g>
+<text x="49" y="21.4" font-family="SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace" font-size="12.5" font-weight="700" fill="#c9d1d9" text-anchor="middle">GITHUB</text>
+<text x="182" y="21.4" font-family="SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">MANISH-ATHITH</text>
+</svg>
