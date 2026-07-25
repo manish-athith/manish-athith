@@ -5,13 +5,19 @@ self-typing, monochrome ASCII-art SVG.
 
 The prepped image is downsampled to a character grid; each pixel's
 brightness selects a glyph from a density ramp (sparse -> dense).
-Each row is wrapped in a horizontal clip-path wipe that reveals it
-left-to-right, staggered top to bottom, using pure SMIL animation
-(no JavaScript, no CSS-in-README — GitHub renders this fine because
-it's all inside the <img>-embedded SVG).
+
+IMPORTANT finding from testing against the live rendered profile page:
+GitHub's SVG sanitizer strips the entire <style> tag (not just SMIL
+<animate>/<animateTransform> — CSS @keyframes inside <style> get
+stripped too). Any color/font defined only via a CSS class silently
+disappears, which is why text rendered invisible even with "working"
+CSS animation code. The fix is to put font-family/font-size/fill
+directly as presentation ATTRIBUTES on each element (never inside
+<style>) — exactly how the contribution heatmap's cell colors survive
+(they're set via a "fill" attribute per <rect>, not a CSS class).
+So: no <style>, no animation, plain attributes only.
 
 Usage: python3 make_ascii_svg.py [source-prepped.png] [avi-ascii.svg]
-Env:   STATIC=1  -> emit a frozen (fully revealed) frame, no animation
 """
 import os
 import sys
@@ -57,63 +63,21 @@ def build_svg(rows, static=False):
 
     parts = []
     parts.append(
-        f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
         f'width="{width:.0f}" height="{height:.0f}" viewBox="0 0 {width:.0f} {height:.0f}">'
     )
     parts.append(f'<rect width="100%" height="100%" fill="{BG}" rx="10"/>')
-    parts.append(
-        f'<style>text{{font-family:\'SFMono-Regular\',Consolas,\'Liberation Mono\',Menlo,monospace;'
-        f'font-size:{FONT_SIZE}px;fill:{FILL};white-space:pre;}}</style>'
-    )
 
-    row_dur = 0.42
-    stagger = 0.055
+    font_attrs = (
+        f'font-family="SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace" '
+        f'font-size="{FONT_SIZE}" fill="{FILL}" xml:space="preserve"'
+    )
 
     for i, row in enumerate(rows):
         y = pad_y + (i + 1) * LINE_H
-        row_w = COLS * CHAR_W
-        clip_id = f"rowclip{i}"
-        start = i * stagger
-
         if not row.strip():
             continue  # blank row, nothing to draw
-
-        if static:
-            # frozen frame: clip rect fully open from the start, no animation
-            parts.append(
-                f'<clipPath id="{clip_id}"><rect x="{pad_x}" y="{y - LINE_H}" '
-                f'width="{row_w:.1f}" height="{LINE_H + 4:.1f}"/></clipPath>'
-            )
-        else:
-            # clip rect starts at width 0 and animates open — <animate> is
-            # nested as a child of the rect it targets, so no xlink:href
-            # indirection is needed (keeps this robust under GitHub's
-            # SVG sanitizer).
-            parts.append(
-                f'<clipPath id="{clip_id}"><rect x="{pad_x}" y="{y - LINE_H}" '
-                f'width="0" height="{LINE_H + 4:.1f}">'
-                f'<animate attributeName="width" from="0" to="{row_w:.1f}" '
-                f'begin="{start:.3f}s" dur="{row_dur}s" fill="freeze" '
-                f'calcMode="spline" keySplines="0.25 0.1 0.25 1"/>'
-                f'</rect></clipPath>'
-            )
-
-        parts.append(f'<g clip-path="url(#{clip_id})">')
-        parts.append(f'<text x="{pad_x}" y="{y}">{esc(row)}</text>')
-        parts.append('</g>')
-
-        # small block cursor riding the wipe edge (skipped in static mode)
-        if not static:
-            parts.append(
-                f'<rect x="{pad_x}" y="{y - LINE_H + 1}" width="{CHAR_W:.1f}" '
-                f'height="{LINE_H - 2:.1f}" fill="{FILL}" opacity="0.55">'
-                f'<animate attributeName="x" from="{pad_x}" to="{pad_x + row_w:.1f}" '
-                f'begin="{start:.3f}s" dur="{row_dur}s" fill="freeze" '
-                f'calcMode="spline" keySplines="0.25 0.1 0.25 1"/>'
-                f'<animate attributeName="opacity" from="0.55" to="0" '
-                f'begin="{start + row_dur:.3f}s" dur="0.15s" fill="freeze"/>'
-                f'</rect>'
-            )
+        parts.append(f'<text x="{pad_x}" y="{y}" {font_attrs}>{esc(row)}</text>')
 
     parts.append('</svg>')
     return "\n".join(parts)
