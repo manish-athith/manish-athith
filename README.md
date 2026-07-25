@@ -19,7 +19,7 @@
 
 <h3><code>manish@github ~ $ ./links.sh</code></h3>
 
-<b>AI Product Research Fellow · ML Engineer · Builder</b>
+<b>AI Product Manager · AI/ML Engineer · Builder</b>
 
 <br><br>
 
