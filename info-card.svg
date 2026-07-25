@@ -9,50 +9,50 @@
 <g id="row-now" opacity="0" transform="translate(-8,0)">
 <text x="24" y="68" class="mono label">Now</text>
 <text x="112" y="68" class="mono value">AI Product Research Fellow @ iHub-Data, IIIT Hyderabad</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.00s" dur="0.35s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.00s" dur="0.35s" fill="freeze" additive="replace"/>
 </g>
 <g id="row-prev" opacity="0" transform="translate(-8,0)">
 <text x="24" y="97" class="mono label">Prev</text>
 <text x="112" y="97" class="mono value">Product Lead @ Polygnan · AI/Product Intern @ Jangle, Alpixn,</text>
 <text x="112" y="116" class="mono value">Foruppo</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.16s" dur="0.35s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.16s" dur="0.35s" fill="freeze" additive="replace"/>
 </g>
 <g id="row-stack" opacity="0" transform="translate(-8,0)">
 <text x="24" y="145" class="mono label">Stack</text>
 <text x="112" y="145" class="mono value">Python · SQL · XGBoost/Scikit-learn · LangChain/LLMs · FastAPI</text>
 <text x="112" y="164" class="mono value">· React · GCP</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.32s" dur="0.35s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.32s" dur="0.35s" fill="freeze" additive="replace"/>
 </g>
 <g id="row-hl-header" opacity="0" transform="translate(-8,0)">
 <text x="24" y="201" class="mono label">Highlights</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.48s" dur="0.35s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.48s" dur="0.35s" fill="freeze" additive="replace"/>
 </g>
 <g id="row-hl-0" opacity="0" transform="translate(-8,0)">
 <text x="24" y="223" class="mono dim">*</text>
 <text x="40" y="223" class="mono hl">Best Mock Pitch Award + Top 7/cohort — LokKala Demo Day</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.64s" dur="0.35s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.64s" dur="0.35s" fill="freeze" additive="replace"/>
 </g>
 <g id="row-hl-1" opacity="0" transform="translate(-8,0)">
 <text x="24" y="248" class="mono dim">*</text>
 <text x="40" y="248" class="mono hl">Built SHANK: real-time phishing + threat-intel platform</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.80s" dur="0.35s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.80s" dur="0.35s" fill="freeze" additive="replace"/>
 </g>
 <g id="row-hl-2" opacity="0" transform="translate(-8,0)">
 <text x="24" y="273" class="mono dim">*</text>
 <text x="40" y="273" class="mono hl">Shipped a Conversational AI product, +30% engagement</text>
+<animate attributeName="opacity" from="0" to="1" begin="0.96s" dur="0.35s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.96s" dur="0.35s" fill="freeze" additive="replace"/>
 </g>
 <g id="row-hl-3" opacity="0" transform="translate(-8,0)">
 <text x="24" y="298" class="mono dim">*</text>
 <text x="40" y="298" class="mono hl">Credit Risk ML pipeline deployed as a live Streamlit app</text>
+<animate attributeName="opacity" from="0" to="1" begin="1.12s" dur="0.35s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="-8,0" to="0,0" begin="1.12s" dur="0.35s" fill="freeze" additive="replace"/>
 </g>
-<animate xlink:href="#row-now" attributeName="opacity" from="0" to="1" begin="0.00s" dur="0.35s" fill="freeze"/>
-<animateTransform xlink:href="#row-now" attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.00s" dur="0.35s" fill="freeze" additive="replace"/>
-<animate xlink:href="#row-prev" attributeName="opacity" from="0" to="1" begin="0.16s" dur="0.35s" fill="freeze"/>
-<animateTransform xlink:href="#row-prev" attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.16s" dur="0.35s" fill="freeze" additive="replace"/>
-<animate xlink:href="#row-stack" attributeName="opacity" from="0" to="1" begin="0.32s" dur="0.35s" fill="freeze"/>
-<animateTransform xlink:href="#row-stack" attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.32s" dur="0.35s" fill="freeze" additive="replace"/>
-<animate xlink:href="#row-hl-header" attributeName="opacity" from="0" to="1" begin="0.48s" dur="0.35s" fill="freeze"/>
-<animateTransform xlink:href="#row-hl-header" attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.48s" dur="0.35s" fill="freeze" additive="replace"/>
-<animate xlink:href="#row-hl-0" attributeName="opacity" from="0" to="1" begin="0.64s" dur="0.35s" fill="freeze"/>
-<animateTransform xlink:href="#row-hl-0" attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.64s" dur="0.35s" fill="freeze" additive="replace"/>
-<animate xlink:href="#row-hl-1" attributeName="opacity" from="0" to="1" begin="0.80s" dur="0.35s" fill="freeze"/>
-<animateTransform xlink:href="#row-hl-1" attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.80s" dur="0.35s" fill="freeze" additive="replace"/>
-<animate xlink:href="#row-hl-2" attributeName="opacity" from="0" to="1" begin="0.96s" dur="0.35s" fill="freeze"/>
-<animateTransform xlink:href="#row-hl-2" attributeName="transform" type="translate" from="-8,0" to="0,0" begin="0.96s" dur="0.35s" fill="freeze" additive="replace"/>
-<animate xlink:href="#row-hl-3" attributeName="opacity" from="0" to="1" begin="1.12s" dur="0.35s" fill="freeze"/>
-<animateTransform xlink:href="#row-hl-3" attributeName="transform" type="translate" from="-8,0" to="0,0" begin="1.12s" dur="0.35s" fill="freeze" additive="replace"/>
 </svg>
