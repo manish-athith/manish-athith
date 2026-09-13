@@ -1,42 +1,7 @@
 {
   "username": "manish-athith",
-  "generated_at": "2026-09-12T10:45:15.323736Z",
+  "generated_at": "2026-09-13T11:50:40.668359Z",
   "days": [
-    {
-      "date": "2025-09-07",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-08",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-09",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-10",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-11",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-12",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-13",
-      "level": 0,
-      "count": 0
-    },
     {
       "date": "2025-09-14",
       "level": 0,
@@ -1854,14 +1819,19 @@
     },
     {
       "date": "2026-09-12",
+      "level": 1,
+      "count": 1
+    },
+    {
+      "date": "2026-09-13",
       "level": 0,
       "count": 0
     }
   ],
   "stats": {
-    "total_last_year": 172,
+    "total_last_year": 173,
     "current_streak": 0,
-    "longest_streak": 49,
+    "longest_streak": 50,
     "best_day": {
       "date": "2026-07-25",
       "count": 24
@@ -1879,7 +1849,7 @@
       "2026-06": 0,
       "2026-07": 30,
       "2026-08": 38,
-      "2026-09": 11
+      "2026-09": 12
     }
   }
 }
